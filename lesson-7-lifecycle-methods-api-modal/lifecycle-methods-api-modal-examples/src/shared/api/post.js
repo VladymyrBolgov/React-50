@@ -1,4 +1,5 @@
 import axios from "axios";
+
 const URL = "https://jsonplaceholder.typicode.com/posts";
 const LIMIT = 10;
 
@@ -17,7 +18,6 @@ export const getPosts = async(_page = 1) => {
     });
     return data;
 }
-
 
 export const searchPosts = async(q, _page = 1) => {
     const { data } = await instance.get("/", {
